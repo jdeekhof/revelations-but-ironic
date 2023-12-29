@@ -12,6 +12,15 @@
         <hr />
         <h1>random</h1>
         <div>
+            <h2>12/28/23</h2>
+            <div>
+                <h3>whats my favorite bit of software that I've written</h3>
+                <p>The first time that I felt like I really understood classes and instances was when I spent the better part of an entire night abstracting the process of putting different types of data into certain cells on a spreadsheet. It was also the first time that I really understood what good software architecture really means. The idea is that you decide and delegate behavior to their core classes. The main problem I see when people try to do this is that they are starting from a 5000 foot level and abstracting from the top down. The issue with this is that you will need to rewrite it 50 times in order to get to the true primitive that exists at the very bottom of the project. </p>
+                <p>The project I worked on was filling spreadsheets with various types of data. Making the spreadsheet consisted of adding each datum row by row. The first solution was really messy. We added datum row by row with a long list of cells inside of that `.add_row`. This means if we ever wanted to move a column to another place, we would effectively need to rewrite the entire file along with the headers. The next solution was a lot more nifty. We used procs to continue adding by row, but now a certain function would be called based on the column header. This allowed us the flexibility to move columsn really easily, but placing data in non-repeating fashion was now incredibly difficult and it was impossible to read. My solution, which was my favorite :), abstracted away the placement and allowed classes to own that detail.</p>
+                <p>The solution drew off of the CSV class we used. I made a sheet class, a row class, and a column class. The column belonged to the row and the row belonged to the sheet. Now, placing data was as easy as declaring variables. Here's an example of placing some data in Sheet1!A1. 'sheet_1 = Sheet.new; a = sheet1.add_column!(name: 'Column Header Name'); one = a.add_row!; a.one.insert('some_data')'. There were some drawbacks, but now we could place data or rows with minimal effort. </p>
+            </div>
+        </div>
+        <div>
             <h2>12/26/23</h2>
             <div>
                 <h3>language and understanding</h3>
